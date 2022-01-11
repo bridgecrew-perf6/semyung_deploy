@@ -3,7 +3,7 @@ from django.db import models
 
 # Seokgeun - 작품 카테고리 모델 생성 12.21
 class Type(models.Model):
-    wtype=models.CharField(max_length = 10 , null = True)  # gr / ad / me 일단 3개로
+    wtype=models.CharField(max_length = 500 , null = True)  # gr / ad / me 일단 3개로
 
     def __str__(self):
         return self.wtype
@@ -33,11 +33,11 @@ class Work(models.Model):
     
 # Create your models here.
 class Profile(models.Model):
-    name = models.CharField(max_length=10,blank=True, null=True)
-    pimage = models.CharField(max_length=20,blank=True, null=True)
-    d_pimage = models.CharField(max_length=20,blank=True, null=True)
-    eng_name = models.CharField(max_length=10,blank=True, null=True)
-    introduce = models.TextField(max_length=100,blank=True, null=True)
+    name = models.CharField(max_length=500,blank=True, null=True)
+    pimage = models.CharField(max_length=500,blank=True, null=True)
+    d_pimage = models.CharField(max_length=500,blank=True, null=True)
+    eng_name = models.CharField(max_length=500,blank=True, null=True)
+    introduce = models.TextField(max_length=500,blank=True, null=True)
     email = models.CharField(max_length=20,blank=True, null=True)
-    wpage = models.CharField(max_length=100,blank=True, null=True)
+    wpage = models.CharField(max_length=500,blank=True, null=True)
     project = models.ForeignKey(Work, on_delete = models.CASCADE,blank=True, null=True)
