@@ -1,0 +1,57 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+
+<style type="text/css">
+    a img{
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+    }
+    a:hover img{
+        -webkit-filter: grayscale(0%);
+        filter: none;
+    }
+</style>
+<table width="100%" style="border:none">
+
+    <tr>
+        <td colspan="2" style="background-color:white" height="100"></td><!--여백용-->
+    </tr>
+
+    <tr>
+        <td>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                {% for a in allfile %}
+                    <div class="col">
+                        <div class="card h-100" style="border:0; outline:0;"> <!--card의 선을 없앴다.-->
+                            <div style="text-align: center;"> <!--사진을 가운데에 오게하기 위해 center 속성을 가진 div태그로 감쌌다.-->
+                                <a href = "{%url 'detailprofile' a.id %}"><img src = "{% static a.pimage %}" width="278" height="416"></a>
+                            </div>
+                            <div class="card-body" >
+                                <strong class="card-title" style="font-size: 0.45cm;">{{a.name}}</strong>
+                                <small style="color: grey;"><p class="card-text">{{a.eng_name}}</p></small>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        <td>
+    <tr>
+
+</table>
+
+{% endblock %}
+
+
+    
+    {% comment %} <div class="col">
+        <div class="card h-100" style="border:0; outline:0;">
+            <div style="text-align: center;">
+                <a><img src = "{% static 'imgex.png' %}" width="278" height="416"></a>
+            </div>
+            <div class="card-body" >
+                <h5 class="card-title">홍길동</h5>
+                <p class="card-text">Hong gill dong</p>
+            </div>
+        </div>
+    </div> {% endcomment %}

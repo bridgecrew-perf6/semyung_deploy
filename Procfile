@@ -1,0 +1,1 @@
+web: gunicorn exhbn_project.wsgi --log-file -
