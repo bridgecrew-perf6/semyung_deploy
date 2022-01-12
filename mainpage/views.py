@@ -2,7 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 
 # Create your views here.
-def home(request):
+def home(request):    
+    type_insert()
+    work_insert_ad()
+    work_insert_gr()
+    work_insert_me()
     return render (request, 'home.html')
 
 def allprofile(request):
@@ -57,12 +61,12 @@ def work_detail2_static(request):
 def work_detail3_static(request):
     return render(request, 'work_detail3_static.html')   
 
-def init_data(request):
-    type_insert()
-    work_insert_ad()
-    work_insert_gr()
-    work_insert_me()
-    return render(request, 'home.html')
+# def init_data(request):
+#     type_insert()
+#     work_insert_ad()
+#     work_insert_gr()
+#     work_insert_me()
+#     return render(request, 'home.html')
 
 
 def type_insert():
