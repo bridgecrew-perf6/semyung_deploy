@@ -88,8 +88,8 @@
 <div class="container">
   <div class="ratio ratio-16x9">
     <!-- <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    <video controls loop>
-        <source src="{% static '오동우.mp4' %}" type="video/mp4">
+    <video preload="auto" controls>
+      <source src="{% static '오동우.mp4' %}" type="video/mp4">
     </video>
   </div>
 
