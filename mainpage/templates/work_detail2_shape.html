@@ -63,9 +63,6 @@
         letter-spacing: 0.025rem;
         color: #666;
     }
-    video {
-    width: 100%;
-  }
 </style>
 {% for work in work %}
 {% if work %}
@@ -86,11 +83,13 @@
 <!-- <div style="height: 5rem;"></div> 공백 -->
 
 <div class="container">
+  <video preload="auto" controls>
+    <source src="{% static '국정.mp4' %}" type="video/mp4">
+  </video>
+  
   <div class="ratio ratio-16x9">
     <!-- <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    <video preload="auto" controls>
-      <source src="{% static '국정.mp4' %}" type="video/mp4">
-    </video>
+
   </div>
 
 </div>
