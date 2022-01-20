@@ -63,6 +63,9 @@
         letter-spacing: 0.025rem;
         color: #666;
     }
+    video {
+    width: 100%;
+  }
 </style>
 {% for work in work %}
 {% if work %}
@@ -77,18 +80,27 @@
       <h3 class="author subcontent">{{ work.artist }}</h3>
       <br>
     <p class="lead mb-4 content subcontent">{{ work.description }}</p>
+    </div>
 </div>
 
 <!-- <div style="height: 5rem;"></div> 공백 -->
 
 <div class="container">
   <div class="ratio ratio-16x9">
-    <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <!-- <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <!-- <video preload="auto" controls>
+      <source src="{% static '신혜현.mp4' %}" type="video/mp4">
+    </video> -->
+    <iframe width="544" height="306" src="https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=FDEBE1F6177BC4815B4F534A583AE81C75A0&outKey=V1289aafe8009e6f5a1220e798e7b382bb0e8d855b317ccbc8fbc0e798e7b382bb0e8" frameborder="no" scrolling="no" title="NaverVideo" allow="autoplay; gyroscope; accelerometer; encrypted-media" allowfullscreen></iframe>  </div>
 
 </div>
 
 {% endif %}
 {% endfor %}
 {% endblock %}
+
+
+
+
+
 

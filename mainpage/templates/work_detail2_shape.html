@@ -77,13 +77,18 @@
       <h3 class="author subcontent">{{ work.artist }}</h3>
       <br>
     <p class="lead mb-4 content subcontent">{{ work.description }}</p>
+    </div>
 </div>
 
 <!-- <div style="height: 5rem;"></div> 공백 -->
 
 <div class="container">
   <div class="ratio ratio-16x9">
-    <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <iframe width="100%"  height="auto"src="{{ work.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <!-- <video preload="auto" controls>
+      <source src="{% static '국정.mp4' %}" type="video/mp4">
+    </video> -->
+    <iframe width="544" height="306" src="https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=FDDB3A3C0CC75111FF8F675B389FA5C322ED&outKey=V126321bb05b085329daa7c1e726a7a75b7f64b8834e91bb68c127c1e726a7a75b7f6" frameborder="no" scrolling="no" title="NaverVideo" allow="autoplay; gyroscope; accelerometer; encrypted-media" allowfullscreen></iframe>
   </div>
 
 </div>
@@ -91,4 +96,9 @@
 {% endif %}
 {% endfor %}
 {% endblock %}
+
+
+
+
+
 
