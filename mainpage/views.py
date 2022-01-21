@@ -1329,6 +1329,7 @@ def data_insert():
     obj = Profile()
     obj.name = "김나영"
     obj.pimage = 'pimage/thum/김나영 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/김나영.jpg'
     obj.eng_name = "KIM, NA-YOUNG"
     obj.email = "jme06050@naver.com"
     profile_list.append(obj)
@@ -1336,6 +1337,7 @@ def data_insert():
     obj = Profile()
     obj.name = "김예지"
     obj.pimage = 'pimage/thum/김예지 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/김예지.jpg'
     obj.eng_name = "KIM, YE-JI"
     obj.email = "kkyj9846@naver.com"
     profile_list.append(obj)
@@ -1343,6 +1345,7 @@ def data_insert():
     obj = Profile()
     obj.name = "김다은"
     obj.pimage = 'pimage/thum/김다은 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/김다은.jpg'
     obj.eng_name = "KIM, DA-EUN"
     obj.email = "daen0202@naver.com"
     profile_list.append(obj)
@@ -1350,6 +1353,7 @@ def data_insert():
     obj = Profile()
     obj.name = "김영경"
     obj.pimage = 'pimage/thum/김영경 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/김영경.jpg'
     obj.eng_name = "KIM, YOUNG-KYUNG"
     obj.email = "kim51867@naver.com"
     profile_list.append(obj)
@@ -1357,6 +1361,7 @@ def data_insert():
     obj = Profile()
     obj.name = "안예은"
     obj.pimage = 'pimage/thum/안예은 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/안예은.jpg'
     obj.eng_name = "AN, YE-EUN"
     obj.email = "0629an@naver.com"
     profile_list.append(obj)
@@ -1364,9 +1369,92 @@ def data_insert():
     obj = Profile()
     obj.name = "정예림"
     obj.pimage = 'pimage/thum/정예림 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/정예림.jpg'
     obj.eng_name = "JUNG, YE-LIM"
     obj.email = "ylimjung99@gmail.com"
     profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "지광민"
+    obj.pimage = 'pimage/thum/지광민 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/지광민.jpg'
+    obj.eng_name = "JI, GWANG-MIN"
+    obj.email = "lamper7337@naver.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "한승희"
+    obj.pimage = 'pimage/thum/한승희 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/한승희.jpg'
+    obj.eng_name = "HAN, SEUNG-HEE"
+    obj.email = "hsh0148@naver.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "홍성현"
+    obj.pimage = 'pimage/thum/홍성현 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/홍성현.jpg'
+    obj.eng_name = "HONG, SEONG-HYEON"
+    obj.email = "shengxian8138@naver.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "김규리"
+    obj.pimage = 'pimage/thum/김규리 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/김규리.jpg'
+    obj.eng_name = "KIM, GYOU-LEE"
+    obj.email = "kimgyoulee@gmail.com"
+    profile_list.append(obj)
+
+    obj = Profile()
+    obj.name = "무함마드 나우팔"
+    obj.pimage = 'pimage/thum/무함마드나우팔 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/무함마드나우팔.jpg'
+    obj.eng_name = "MUHAMMAD NAUFAL BIN OMAR"
+    obj.email = "ylimjung99@gmail.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "장함"
+    obj.pimage = 'pimage/thum/장함 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/장함.jpg'
+    obj.eng_name = "ZHANG HAN"
+    obj.email = "2323671919@qq.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "고벽영"
+    obj.pimage = 'pimage/thum/고벽영 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/고벽영.jpg'
+    obj.eng_name = "GAO, BI-YING"
+    obj.email = "gaobiying97@gmail.com"
+    profile_list.append(obj)
+    
+    
+    obj = Profile()
+    obj.name = "우삼청"
+    obj.pimage = 'pimage/thum/우삼청 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/우삼청.jpg'
+    obj.eng_name = "YU SEN QING"
+    obj.email = "465198298@qq.com"
+    profile_list.append(obj)
+    
+    obj = Profile()
+    obj.name = "임운유"
+    obj.pimage = 'pimage/thum/임운유 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/임운유.jpg'
+    obj.eng_name = "LIN YUN WEI"
+    obj.email = "nanwusang@gmail.com"
+    profile_list.append(obj)
+ 
+    obj = Profile()
+    obj.name = "신유찬"
+    obj.pimage = 'pimage/thum/신유찬 썸네일.jpg'
+    obj.d_pimage = 'pimage/detail/신유찬.jpg'
+    obj.eng_name = "SHIN, YOO-CHAN"
+    obj.email = "sincome007@naver.com"
+    profile_list.append(obj)
+    
     
     for x in profile_list:
         if Profile.objects.filter(name=x.name).exists(): #새로고침 시 중복체크
