@@ -5,31 +5,30 @@
 
 
 <div class="container">
-<table style="border:none">
+
+<table style="border:none; width: 100%;" >
     <tr>
-        <td colspan="2" style="background-color:white" height="160"></td> <!--여백용-->
+        <td style="background-color:white" height="160"></td> <!--여백용-->
     </tr>
   
     <tr>
-        <td style="background-color:white; width:5%"></td>
-        
-        <td style="width: 40%;">
-            <div class="card h-100" style="border:0; outline:0;"> <!--card의 선을 없앴다.-->
-                <div style="text-align: left;"> <!--사진을 가운데에 오게하기 위해 center 속성을 가진 div태그로 감쌌다.-->
-                    <a><img src = "{% static ppp.pimage %}" width="342" height="512"></a> <!--330*480사이즈인데 10프로씩 사이즈를 줄였다.-->
-                </div>
+        <td style="width: 45%;">
+            <div style="float: left; width: 7%;">
+                <p></p>
             </div>
-            <div class="card-body" style= "margin: 0; padding: 0; width:278px; text-align: left;">
-                <br>
-                <h5 class="card-title"><strong>{{ppp.name}}</strong></h5>
-                <small style="color: grey;"><p class="card-text">{{ppp.eng_name}}</p></small>
-                <small style="color: grey;"><p class="card-text">{{ppp.email}}</p></small>
+            <div class="card h-100" style="border:0; outline:0;">
+                <div>
+                    <img src = "{% static ppp.pimage %}" width="342" height="512">
+                    <br>
+                    <h5><strong>{{ppp.name}}</strong></h5>
+                    <small style="color: grey;"><p class="card-text">{{ppp.eng_name}}</p></small>
+                    <small style="color: grey;"><p class="card-text">{{ppp.email}}</p></small>
+                </div>
             </div>
         </td>
 
-        <!-- <td style="background-color:white; width:5%"></td>여백용 -->
 
-        <td style="width: 50%;">
+        <td style="width: 55%;">
             <div class="row row-cols-1 row-cols-md-2 g-2">
                 {% for works in works %}
                 {% if ppp.name in works.artist %}
@@ -54,16 +53,8 @@
     </tr>
     
     <tr>
-        <td colspan="2" style="background-color:white" height="200"></td><!--여백용-->
+        <td colspan="2" style="background-color:white" height="100"></td><!--여백용-->
     </tr>
-    <!-- <tr>
-        <td style="background-color:#329998; width:50%">
-            <div class="card-body" style= "text-align:center; margin: 0; padding: 0;">
-                <h5 class="card-title">홍길동</h5>
-                <p class="card-text">Hong gill dong</p>
-            </div>
-        </td>
-    </tr> -->
 </table>
 </div>
 {% endblock %}
