@@ -3,6 +3,7 @@ from .models import *
 
 # Create your views here.
 def home(request):
+    data_insert()
     return render (request, 'home.html')
 
 def allprofile(request):
@@ -71,7 +72,6 @@ def work_detail3_static(request):
     return render(request, 'work_detail3_static.html')   
 
 def init_data(request):
-    data_insert()
     type_insert()
     work_insert_ad()
     work_insert_gr()
