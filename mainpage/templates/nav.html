@@ -188,7 +188,7 @@
           </a>
           <ul class="nav seoknav">
             <li class="nav-item" style=" margin:auto; padding-right:16px; padding-left:16px;"><a href="{%url 'about' %}" class="nav-link px-2 whiteColor change1" >About</a></li>
-            <li class="nav-item" style="margin:auto; padding-right:16px; padding-left:16px;" ><a href="{%url 'allprofile' %}" class="nav-link px-2 whiteColor change1">Designers</a></li>
+            <li class="nav-item" style="margin:auto; padding-right:16px; padding-left:16px;" ><a href="{%url 'allprofile' %}" class="nav-link px-2 whiteColor change1">Designer</a></li>
             <li class="nav-item dropdown" style="margin:auto;">
               <strong><a class="nav-link whiteColor change1" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Works</a></strong>
               <ul class="dropdown-menu">
@@ -218,8 +218,10 @@
 
 
   <div class="container page-start" style="width: 100%;">
+    <div style="height: 100px;"></div>
     {% block content %}
     {% endblock %}
+    <div style="height: 100px;"></div>
   </div>
 
 </body>

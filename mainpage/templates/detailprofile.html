@@ -12,7 +12,7 @@
     </tr>
   
     <tr>
-        <td style="width: 45%;">
+        <td style="width: 45%; vertical-align: top;">
             <div style="float: left; width: 7%;">
                 <p></p>
             </div>
@@ -20,27 +20,27 @@
                 <div>
                     <img src = "{% static ppp.pimage %}" width="342" height="512">
                     <br>
-                    <h5><strong>{{ppp.name}}</strong></h5>
-                    <small style="color: grey;"><p class="card-text">{{ppp.eng_name}}</p></small>
-                    <small style="color: grey;"><p class="card-text">{{ppp.email}}</p></small>
+                    <strong style="font-size: 24pt;">{{ppp.name}}</strong>
+                    <p class="card-text" style="color: grey; font-size: 18pt;">{{ppp.eng_name}}</p>
+                    <p class="card-text" style="color: grey; font-size: 18pt;">{{ppp.email}}</p>
                 </div>
             </div>
         </td>
 
 
-        <td style="width: 55%;">
+        <td style="width: 55%; vertical-align: top;">
             <div class="row row-cols-1 row-cols-md-2 g-2">
                 {% for works in works %}
                 {% if ppp.name in works.artist %}
                 <div class="col">
                     <div class="card h-100" style="border:0; outline:0;">
                         <div style="text-align: left;">
-                            <a href="{% url 'work_detail' works.pk %}"><img src = "{% static works.thumbnail %}" width="278" height="208"></a> <!--330*480사이즈인데 10프로씩 사이즈를 줄였다.-->
+                            <a href="{% url 'work_detail' works.pk %}"><img src = "{% static works.thumbnail %}" width="285" height="208"></a> <!--330*480사이즈인데 10프로씩 사이즈를 줄였다.-->
                         </div>
 
                         <div class="card-body" style= "text-align:left; margin: 0; padding: 0; font-size: medium;">
-                            <strong class="card-title">{{works.title}}</strong>
-                            <small style="color: grey;"><p class="card-text">{{works.artist}}</p></small>
+                            <strong class="card-title" style="font-size: 24pt;">{{works.title}}</strong>
+                            <p class="card-text" style="color: grey; font-size: 18pt;">{{works.artist}}</p>
                             <br>
                         </div>
                     </div>
