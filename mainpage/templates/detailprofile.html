@@ -18,10 +18,10 @@
             </div>
             <div class="card h-100" style="border:0; outline:0;">
                 <div>
-                    <img src = "{% static ppp.pimage %}" width="342" height="512">
+                    <img src = "{% static ppp.pimage %}" width="380" height="568">
                     <br>
                     <strong style="font-size: 24px;">{{ppp.name}}</strong>
-                    <p class="card-text" style="color: grey; font-size: 18px;">{{ppp.eng_name}}<br>{{ppp.email}}</p>
+                    <p style="color: grey; font-size: 18px;">{{ppp.eng_name}}<br>{{ppp.email}}</p>
                 </div>
             </div>
         </td>
@@ -34,7 +34,7 @@
                 <div class="col">
                     <div class="card h-100" style="border:0; outline:0;">
                         <div style="text-align: left;">
-                            <a href="{% url 'work_detail' works.pk %}"><img src = "{% static works.thumbnail %}" width="285" height="208"></a> <!--330*480사이즈인데 10프로씩 사이즈를 줄였다.-->
+                            <a href="{% url 'work_detail' works.pk %}"><img src = "{% static works.thumbnail %}" width="278" height="208"></a> <!--330*480사이즈인데 10프로씩 사이즈를 줄였다.-->
                         </div>
 
                         <div class="card-body" style= "text-align:left; margin: 0; padding: 0; font-size: medium;">
