@@ -13,11 +13,10 @@
   
     <tr>
         <td style="width: 45%; vertical-align: top;">
-            <div style="float: left; width: 17%;">
+            <div style="float: left; width: 8%;">
                 <p></p>
             </div>
             <div class="card h-100" style="border:0; outline:0;">
-                <div>
                     <img src = "{% static ppp.pimage %}" width="380" height="568">
                     <div style="height: 45px;">
                     </div>
@@ -26,12 +25,14 @@
                     <div style="height: 38px;">
                     </div>
                     <div style="color: grey; font-size: 18px;">{{ppp.email}}</div>
-                </div>
             </div>
         </td>
 
 
         <td style="width: 55%; vertical-align: top;">
+            <div style="float: left; width: 10%;">
+                <p></p>
+            </div>
             <div class="row row-cols-1 row-cols-md-2 g-2">
                 {% for works in works %}
                 {% if ppp.name in works.artist %}
