@@ -1234,7 +1234,7 @@ def data_insert():
     obj.name = "정명현"
     obj.pimage = 'pimage/thum/정명현 썸네일.jpg'
     obj.d_pimage = 'pimage/detail/정명현.jpg'
-    obj.eng_name = "KIM, SEON-SIK"
+    obj.eng_name = "JUNG, MYUNG-HYUN"
     obj.email = "kih3957@naver.com"
     profile_list.append(obj)
     
