@@ -99,7 +99,7 @@
       var $header = $('.fix'); //헤더를 변수에 넣기
       var $page = $('.page-start'); //색상이 변할 부분
       var $window = $(window);
-      var pageOffsetTop = $page.offset().top-40;//색상 변할 부분의 top값 구하기
+      var pageOffsetTop = ($page.offset().top-40)/2;//색상 변할 부분의 top값 구하기
       
       var $change1 = $('.change1');
 
@@ -107,7 +107,7 @@
       var $changeDisplay2 = $('.changeDisplay2');
 
       $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
-        pageOffsetTop = $page.offset().top-40;
+        pageOffsetTop = ($page.offset().top)-40/2;
       });
       
       $window.on('scroll', function(){ //스크롤시
