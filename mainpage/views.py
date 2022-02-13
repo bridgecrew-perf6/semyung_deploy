@@ -70,6 +70,48 @@ def work_detail2_static(request):
 def work_detail3_static(request):
     return render(request, 'work_detail3_static.html')   
 
+def init_data2(request):
+    choi_insert()
+    return render(request, 'home.html')
+
+def choi_insert():
+    work_list = []
+
+    w = Work()
+    w.artist='최은지'
+    w.title= '버츠비스'
+    w.description= 'BURT’S BEES ‘버츠비스’ 라는 자연 친화적 화장품 브랜드를 상품 광고하는 디자인으로 립밤으로 팬 플루트를 연상시키도록 디자인하였고,  ‘ 부드럽게 연주하듯 바르세요. ’ 라는 카피와 함께 립밤을 부드럽게 바르라는 표현을 담아 디자인 하였습니다.'
+    w.thumbnail= 'wimage/thum/최은지_광고썸네일.png'
+    w.pic= 'wimage/pic/최은지_광고_버츠비스.jpg'
+    w.wtype=Type.objects.get(wtype = 'ad')
+    work_list.append(w)
+
+    gr = Work()
+    gr.artist='최은지'
+    gr.title= '농담'
+    gr.description= '농부들과 소비자들을 위한 유기농 채소, 과일 브랜드이다. 식재료를 사는 소비자들에게 걱정과 부담 없이 깨끗한 식재료를 제공하는 유기농 브랜드를 디자인하였다. 브랜드 네이밍은 ‘농부들의 진심을 담았다’ 라는 뜻으로, 자연재해로 피해를 입은 농민들에게 일부 수익금이 기부되는 브랜딩 디자인이다.'
+    gr.thumbnail= 'gimage/thum/최은지_농담_썸네일.png'
+    gr.pic= 'gimage/pic/최은지_농담판넬.png'
+    gr.picprd= 'gimage/picprd/최은지_농담_목업.png'
+    gr.wtype=Type.objects.get(wtype = 'gr')
+    work_list.append(gr)
+
+    me = Work()
+    me.artist= '최은지'
+    me.title= '마음챙김 명상법'
+    me.description= '현대인들의 고질병인 스트레스를 해소할 수 있으며, 그 외 여러 질병들의 치료법으로 쓰이는 ‘명상’ 이라는 행위에 대해서 설명합니다. 명상의 다양한 효과들과 명상의 유형들에 대하여 소개하는 과정을 인포그래픽과 일러스트 모션그래픽으로 표현했습니다.'
+    me.thumbnail= 'mimage/thum/최은지_영상썸네일.png'
+    me.pic= 'mimage/pic/최은지_마음챙김명상법_보드.jpg'
+    me.youtube= 'https://www.youtube.com/embed/r9yQEuppr-4'
+    me.wtype=Type.objects.get(wtype = 'me')
+    work_list.append(me)
+
+    for x in work_list:
+        if Work.objects.filter(title=x.title).exists(): #새로고침 시 중복체크
+            pass
+        else:
+            x.save()
+
 def init_data(request):
     type_insert()
     work_insert_ad()
