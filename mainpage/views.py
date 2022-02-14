@@ -111,6 +111,21 @@ def choi_insert():
             pass
         else:
             x.save()
+    
+    profile_list = []    
+    obj = Profile()
+    obj.name = "최은지"
+    obj.pimage = 'pimage/thum/최은지사진.jpg'
+    obj.d_pimage = 'pimage/detail/최은지사진.jpg'
+    obj.eng_name = "Choi, Eun-Ji"
+    obj.email = "cho8266@naver.com"
+    profile_list.append(obj)
+    
+    for x in profile_list:
+        if Profile.objects.filter(name=x.name).exists(): #새로고침 시 중복체크
+            pass
+        else:
+            x.save()
 
 def init_data(request):
     type_insert()
